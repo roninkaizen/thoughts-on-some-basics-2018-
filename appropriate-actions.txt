@@ -1,0 +1,53 @@
+Mir fiel innerhalb der letzten Wochen auf, daß 
+a) der chinesische Anteil an Nodes im ethereum foundation network zugenommen hat
+b) während die Benutzer isgesamt über eine Qualitätsverminderung im Bereich vom synchron werden sprachen
+
+Nach einer detaillierten Analyse der eigenen 3 nodes ergab sich ein frappierendes Bild.
+
+Die nodes.json, die parity benutzt, um zu zählen, wie erfolgreich die Kontaktaufnahme zu anderen nodes ist,
+wächst mit der Zeit und gibt wertvolle Anhaltspunkte, wo es denn für parity nodes eventuell "klemmen" könnte.
+
+Auszug aus einer nodes.json
+
+    {
+      "url": "enode://d797c8d86ddb0f01b20baa09bd9e9e0e36e154124ad4e4a85742fca93b49c3dff53b7b3f813f4cd543dca21a96d1b19eb9bccb308da6fa8ec16e597f79b1eeba@59.110.241.254:30303",
+      "attempts": 14,
+      "failures": 7
+    },
+    {
+      "url": "enode://f29388f8ca4b42428b76a5bc2e9c6a1bcd6c12a25f55540f8542f12cc34c893131fd6fa7b554c0055acd5365195fedcd35a000edf4575304137f1e891af418e4@163.172.190.134:30303",
+      "attempts": 146,
+      "failures": 80
+    },
+    {
+      "url": "enode://9292f13f9e14c1565028f40cadd498061c55858f345aacf13de9fba742b5daed807c6b68a206d77d1692fb98506bd619f96d057d478cb6eddf263d6647dae72c@35.182.199.122:30388",
+      "attempts": 236,
+      "failures": 121
+    },
+    {
+      "url": "enode://df3c40260ae9bd5f8a9b6f2922bfeed32ca24282527e80003fd1038d00b765f396290185235a4177d19b1efbad1fd8a47200f77707ea23cd1872ff3ad451d835@52.67.171.152:30388",
+      "attempts": 248,
+      "failures": 124
+    },
+    {
+      "url": "enode://b3db51ff38b376226a8b80ae4c1e8a1594102e5d426334445bb0ca78e173cc0c488ae069bdd88aefbf6af78eb242a62a1106cbf47562151cb4876c02d6a76a4d@130.240.22.202:30305",
+      "attempts": 269,
+      "failures": 144
+    },
+    {
+      "url": "enode://29a9e2605a1267042e715ba3c1f4c6325416e897e49f1746cfdf6d155d7c3fbe23d722891214bc66ca6d364636aac1fd64f4f5422b74ebeb8e85eecef784a10d@79.135.77.206:30313",
+      "attempts": 304,
+      "failures": 161
+    }
+
+Wenn man da mal so durchguckt, kann einem leicht schlecht werden,
+glücklicherweise kein statistischer Ausschnitt, sondern eine Form von Übertreibung.
+
+Bitte überprüft aus Eurer individuellen json datei heraus, wie die "connect-successful"- rate einer jeden node ist-
+
+mit den gesammelten Daten können wir weiter "gehen" als bisher.
+
+Bevor was Dummes geschieht, sollen wir dem entgegengehen.   
+
+
+
