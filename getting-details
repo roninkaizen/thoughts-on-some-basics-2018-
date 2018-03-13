@@ -1,0 +1,203 @@
+Wie ich schon einige Male berichtet habe,
+kam mir der Gedanke, daß das lose verpaaren von nodes
+zwar reichlich Vorteile, wohl aber auch ein paar Nachteile mit sich bringt.
+
+Einige Recherche und Probieren brachten mich dann langsam aber sicher auf die richtige
+Lösung bzw. den Ansatz, dies an der Stelle mit den Mittel zu verbessern, wo ich es faktisch kann.
+
+Dies geht so-
+bisher ausser Acht lassend, daß parity durchaus eine reserved.txt 
+verarbeiten kann-
+soweit, so hervorragend.
+
+Darüberhinaus schreibt parity selbst in eines nodes.json ja schon "Kandidaten" bzw. sogar Erfolgsquotienten
+für erfolgreiche Kontaktaufnahme
+
+ich ziehe da mal drei Zeilen hervor
+
+{
+      "url": "enode://49a358887e96745b13775f79c40bc544552d98598ce8695fd6f564f9b0255f0d774b99added2eb903af67f4dd97630a43f794b40024dd146d12cd5a817729081@79.228.120.38:30303",
+      "attempts": 150,
+      "failures": 148
+    },
+    {
+      "url": "enode://11b9b881072c2597f57a60a46573d045506c8942f6f7caeb1030cc15daf848f19a34c907ae2f0413ea482e62d7774345bf967b41f2e68c389fb5f9bb4733387f@83.133.244.235:58321",
+      "attempts": 213,
+      "failures": 212
+    },
+    {
+      "url": "enode://5bff61ff0c0bf4d3706c885dfd6d4bcac2484510c987051a548dee0326d16b52bd708bb54857583db60b7681716295f321fad421904b48a561bc6ca4bee233ff@176.199.195.134:30303",
+      "attempts": 214,
+      "failures": 213
+    },
+
+Ehrlich gesagt, sehen diese nodes nicht so aus, als "wenn da was ginge" um eine sehr wohlwollende Formulierung
+zu verwenden.
+
+Woran das liegen mag, weiß keiner genau, aber die Quote von attempts zu failures kann sich jeder an drei Daumen abzählen.
+
+Je höher der Wert desto schlechter die erfolgsorientierte Kontaktaufnahme, von dem "danach" ganz zu schweigen.
+
+Also-
+mit einer zwischentabelle zum abgleich sind wir schnell "dabei",
+alle "möglichen" zu scoren, danach zu ranken und "vorzuhalten".
+Übers Ablegen und so weiter noch keine Rede.
+Wir reden hier nicht über Wahnsinnstaten, sondern einfach von Übertragungen in andere Formate,
+um damit anders besser/effektiver arbeiten zu können.
+
+Darüberhinaus kann ich auch eine weitere Quelle für "mögliche" hinzunehmen.
+Diese nennt sich ethernodes.org und zeigt die Anzahl der nodes und ihre Details an,
+da dies eine Webseite ist, die per curl parametrisiert aufgerufen werden kann,
+bekommen wir hier auch noch Werte wie oben beschrieben.
+
+Ausgehend davon, daß sich innerhalb der eigenen nodes.json nur eine Teilmenge an nodes im Netz 
+befindlich connecten kann (also nicht swarm, EthereumBot, u.a) um somit eine
+höhere und schnelle dabei aber stabilere dauerhafte Austauschleistung zu erzielen.
+
+
+Ausgehend vom patricia tree und den dahinterliegenden mechanismen im herzen der evm und der Weitläufigkeit
+des gesamten Spektrum ans nodes kann ich also davon ausgehen, daß sich also 
+locker 500-1000 nodes in meiner mittelbaren Umgebung befinden. Wie ich darauf komme ist sehr einfach.
+
+Mit einem optischen Trace auf die einzelnen nodes, die die niedrigsten Pingraten zu meinen eigenen host erzeugen,
+kann die übertragungsrate gleich hoch, niedriger order höher sein.
+Ausgehend von der ersten rudimentären Tabelle mit
+
+enode-attemtps-failures-seenat(unixtime)
+
+können wir nun erweitern, oder schon die erste Aufteilung andenken
+hinsichtlich normalisierung
+ja, wichtig, aber etwas später
+
+um was erweitern wir eventuell und wann tun wir dies zu welchem Zwecke-
+kiss -devise
+
+Also
+
+das zusätzliche pingen und messen/halten/verarbeiten dieser Werte
+darf mit den dem Quotienten
+
+zusammengeführt werden, der uns sagt, wie erfolgreich es war anzuklopfen-
+wie auch immer, es gilt zu vermeiden, verbindungsversuche zu echten Blindgängern zu regulieren bzw. zu minimieren.
+
+quotient erfolgsquote
+
+aufbereitete daten aus ethernodes.org per curl geholt 
+mit python umhäckselt
+auf tabellenform gebracht und
+"wirft"
+table(1)
+enode seenat(unixtime) (ip) descending sorted by ping (if)
+
+ein zweites script "wirft" aus der nodes.json
+table(2)
+enode seenat(unixtime) (ip) ascending sorted by Quotient aus attempts/failures 
+
+wenn nun auf welcher datenbankebene auch immer beide tabellen "übereinandergelegt" 
+hat, kommt man auf eine ausgezeichnet erfrischende Auswahl an nodes, mit 
+denen man sich auch rückblickend auf megabytes an nodes.json datei zu selten
+gepaart hat oder nicht konnte, weil "irgendwas" war.
+
+Nun hat man wenn man mag eine überlappende Tabelle mit der wilde spiele gehen,
+zum einen die erweiterung des curl scriptes zum selektieren wesentlich größerer datenmengen
+um diese dann angemessen energie- und ressourcensparend in die software zurückgeben kann.
+
+Meine Idee ist hier simpel einfach und sehr angenehm und leicht umzusetzen.
+Geht so:
+Die übereinandergelegte Tabelle muß nicht schön sein, 
+wohl aber einem Erfordernis entsprechen,
+damit es bei parity gleich geht.
+Sie muß richtig formatiert sein,
+denn wenn sie falsch aussieht, wird sie nicht verarbeitet werden. 
+Nur drei Versuche später konnte
+ich die richtige Formatierung widerum per script erzeugen.
+
+
+auswerfen geht dann so
+
+enode://a1df1aa0f0ac8db03efdc6add70af3441f3e31d0ce4463810af6939f1dadf883fb3798fb6671eb9099b1baf27d26cde1e474ca0061288317fc534bffc12692fb@86.103.225.51:43042
+enode://df51b43e3c0a1734ae85b6ea8fad2198a30795934a5bd8803b92d060b3cb134299a28fab0fce770521b15c7e2043429ee695ad2e994b43447cd9892142f0ca57@101-234-103-86.dynamic.dsl.tng.de:64749
+enode://6a84ded7c81d6e28854de96a53e36eb79c118b401e437286e397524587412ea4f5b214adda6cbeee37ca28d55796ce6c19198430df06d7aa285c4be7f60e88bb@51-225-103-86.dynamic.dsl.tng.de:63596
+enode://1c6603d1405a2e56c10acfd39a9f2aee365c84dc072947057da81e085a56d314891a9f39391f00d62ef2b8b831f71c8b58e500f84f07b77ae741f9b3c5d391cf@138.201.14.19:56754
+enode://1345e8eaea1529875b9c4b751ef7c464f087a8f606c535fe18cc7b74e33938b4f54fa5a89fcaf1c387b318391bd48f8a545bd5118262b37b3208020d7ae8a366@138.201.14.19:41872
+enode://07d739305f68429b448ae8ef4f2353af5fe739dcff38dba6657e456e80bee9e14c9acbade031bc9b9cd4a8f5cd82b1aee036cfe7c575a51287b4824f5e68522d@136.243.45.224:30550
+enode://31709244154e10fb3a2c13ff1ab25d1cbf74d99c5e6a69428926c2c2ba23d1e68fc5050c8350dfe30b9545f4b554a9bab50036dcbfe5037f2ef833080e269701@134.147.61.146:45546
+enode://48b3c9c70f8a4518def8922c5182ddc52f0438f78d76c6c91ce55945635da7a8878c21a83a4618f028ed4334200c00531cb106a19c8637fdaa10750be9f6a2db@109.90.233.213:35924
+enode://c2b237a4fabf631170f058f54f1aa685b7893ae75ff6260aa08e0698fd636573cae7bd1c303d41927aeebc46c5aebb8888994201226fff29c4664d9099b0281b@109.230.215.17:30304
+enode://60a46368626ada85bb9112f5bc6355bd1a5830f931eb85723772a0a6a94d03745f96a35b804283f23b4b8192777548a659d538c568a43ec5332bfded7158e106@109.199.163.72:60001
+enode://b5ba0d55215089494b0c1daebfcc2b39ffad4e6c4d3961d18737660498887d1b179a45e2cf07c08af6b584fcc4942acc17acdd7d26299ec581748a6f23d6346b@109.109.31.8:4868
+enode://197cdca84e89153f870c1e12c12422372979f34fdb252003e94ac5c6f3924b86f705c19d30cfb94a59e719d1aac0e3e9f4ffe29cbe057322f9c0ad1be74f82ca@138.201.14.19:48472
+enode://95c8c545416f0509d46bddf57c3ce763f859b3ea514cceee506720abee629d26851880efbf29a6eab5b723794b463691d5b221bc3f88445080790db2995eb7e8@5.189.169.80:30303
+enode://881da95700559597a924069b9cb235e188bab8bd96641482db8dd53c99848253eb4ace64fdcacd27b73af8acdebb7ea3accca611f71f3dba171c457ef4b36287@62.214.8.230:52507
+enode://a8bc73a12321bd77431911a67559778a73796878334de09a8acdcbbf8884bf15c154c2709e0d7ff4cea7907693ba685d30ace2a62dead1bfdee99dcf44c07787@46.237.255.115:20923
+enode://c2f82becb85ba364a39d3d3368dec74baaf03f96ee2f3d378cbf124cae8359e95eacc887b3a69aaedf1028b8113e8757e274cdc03e3eac708db2945032109b84@80.149.233.242:27783
+enode://c505bb1c7f04d663a02d577de339eb7ea81dce39fa9b4c9b4968444f801ee937a1bee4e1bf8f1dff66b3054ee1c2166e82e733f115644e4a4640f7b168dda350@91.65.138.146:49745
+enode://60a6c41be8d25fb6d1e4e1c5cd13a11685036d9ce25444d563664bafcda0432981188e7feb8e14d5345a6920f4f051b6b25b2c4e6b532cab7440a34598874521@185.23.225.103:46122
+enode://a8ebfce54a770afc730c8cc8a27b541b9a167752773ce7da26e86a09f94e8edb036a282799970fcc8c92b3def686027a2235a1858274f781405a3f4bfe803bc8@78.43.114.172:50690
+enode://d65b94e1d75c770f394e1ae69efdaec6b37c259b137359c007e98fc0d211bbd611e0ab694ff58871a28220f80a7dfaae603d2932ee5b979f363532275ef654ff@87.128.107.29:51113
+enode://7e65dce218e8d484cf81059904458f0d08620702a497337381960fa3016678ac771ad0789717faf4b1a55b55340024d1b4581511d5475ee1fdb7bc2f8be29532@91.6.77.171:53348
+enode://6602bbff681a581b655b9eb709cf88e490f0852ae9fe126b3b820f25d5a4ef25698542d8cca34f5369a564479cff3ca1e074e48c0ea27e3a4f89d43479cf1d4e@217.231.204.189:58928
+enode://6191b1d91088af4e3f377be0a93a17675cb063178e40fbb19acc543a5ed129c7a2bb4eb7c523b51e299cb5afd9f0b2d0a2752756b3d96fcc29e814e5a7583505@91.39.235.196:63767
+enode://5bff61ff0c0bf4d3706c885dfd6d4bcac2484510c987051a548dee0326d16b52bd708bb54857583db60b7681716295f321fad421904b48a561bc6ca4bee233ff@ip-176-199-195-134.hsi06.unitymediagroup.de:30303
+enode://2d84c44439fba080305aa011c635b32b8c1062ca85c9bc54c94436f1749194e434c06c1062ed4767062c833a01bfd2c7759d2c26107ba68979ec886268e7dd01@i577BCD1D.versanet.de:12641
+enode://c699aa6544eaf76e8f7a57bdd4b9a148aea492f849c70acc2a3f90b93b9072aa9bb279fd859725a02d5fd519d0e5be746f66365db3042973f2e3dd831151586d@178.238.226.37:59694
+enode://c56acdf7458ebebe446b442c7573a113b01cf9ab617f9d713533d096d5a0169a7b6f1251d8002e1c928ab8713f95f6bb618f4c1624c8687c162212aad77ba67e@62.75.208.218:30303
+enode://c2b237a4fabf631170f058f54f1aa685b7893ae75ff6260aa08e0698fd636573cae7bd1c303d41927aeebc46c5aebb8888994201226fff29c4664d9099b0281b@109.230.215.17:30304
+enode://b3056d1bde840531fe61feaf7a80bd1670d3025b04965d32dc9c7cdd0ec146a1f75118f7b9ced6c1db434a4feaabf64a71f5b1d0b7e1631affdcd1ac5918130a@88.198.230.126:30303
+enode://b43033a54ab7a35e8ca3b3cd82b27acc460706e58963fee687bef254ae6754182a40c1f138d2781d5d28a17c8d89d6218b87628f56684505d2974336a171b7ac@p4FC630E9.dip0.t-ipconnect.de:30303
+enode://ac79a98951505a7302354bb54a21efa6a3dbab3ca359e15f8f4e444bb5117cf9bdde384d5f825cddc6ef52d8ee4ef881392f9ec36c84dd7ca2298645a1a4833a@dslb-084-059-106-141.084.059.pools.vodafone-ip.de:30303
+enode://7ce729f1631c5ff3f30e02b85df21f0b53151135d68e42ed4c4df33952d1a69d4058534753bec810a6ade539f932f69d83971cbdc359eb16fdd6180da05fca8e@95.90.221.41:6690
+enode://700d01b0bf24e89fa3ed6a880f4d09161a4c6726a59558779b97fa4191cf8d3caf87f44d852987cadb7551a361bc357d3d8e6399a6ff47c1187dcb6bdde9000a@x4e3036dd.dyn.telefonica.de:61036
+enode://663afab3abeee93851ce883c2c59fae326ff82d1ff1ad9c70a2342e97d5e2caf5d29f6f91a5ce183398759d7daa3f32c9567ce7cb47204a5380a95300a221234@p4FFA9D40.dip0.t-ipconnect.de:30303
+enode://63f1e9fd6437e3d0e91bd9038d1e168f08122bd47862a3a0414a03d4172efa65cca01dbd6219705a1f9543857515293c9a8b6dc83116281b1dbd91b4c094b9e4@87.234.34.156:59082
+enode://5b1d44161fa06b4613920a5bf4e467fcd241f2492279a94c4edc314b537a0eaf7f764209530ef0cd3aefc9c490c82bbc089ab31642555ce9307d70125256afe3@p4FF0A320.dip0.t-ipconnect.de:13360
+enode://57d6d42dfec7c72ba9157d2a86e07d874ae74cf71b6aabc283ecbc14e3171d834e3c92d981672fb6bff01360ee1e7ea760b0e8e0e97f09c1923f622da47ce0e8@46.89.58.13:49249
+enode://49a358887e96745b13775f79c40bc544552d98598ce8695fd6f564f9b0255f0d774b99added2eb903af67f4dd97630a43f794b40024dd146d12cd5a817729081@p4FE47826.dip0.t-ipconnect.de:30303
+enode://47aa0f0ea5a74e3e28b04cbbef20cf5681e14055baed57424953072f6bde9bc2e6ede70918229c218a476bba4aa83bc4b708b4fac31d1b8178875ddfd3e2dbdc@p5B08FAD2.dip0.t-ipconnect.de:30303
+enode://43bf2633df570ffcd1cfc1ed4b21f99a2a2141735ba05a2c4d437025f55cdbed8eef64b6623c7ff055aeddb85bc1e916470d03de8b75be8bcf1e6cf23970d258@x590ee0ce.dyn.telefonica.de:30303
+enode://386364973ad404f8fc8cbfa0b0b316273c8d11cfac2c7ffaad2b1eabe2eaf579864ecd9fda12e137e1b03ee7c0b8b6473e0e368e1f9e5bc35e8b59dd98207945@ip-95-222-123-4.hsi15.unitymediagroup.de:30303
+enode://2f4680cba08fa2673901ed9caa07a513069f27d923c86ce56447bb4253b82b1fc146864e375d891ef033851b5665000f52c59cc2adce7c79939ec3e06c1f3065@ip1f10d619.dynamic.kabel-deutschland.de:30303
+enode://0db2873f07d3247bcb18158ad54ec8551c3f84d370cb8e2bdcaa7df3704e5db18c5f3637b05f66a3863b3a0fb7e2e19196442b39d5584a05b14279a286a108f4@i577B8FAD.versanet.de:64286
+enode://7589354b9d8d359913dad97b9fd192ebd37448f4926f89ec1916700748adde274d386cfd2a8875a17a267caa71654e3ac1498d17292a7eb52e01f4ddc053dbcc@148.251.87.173:49024
+enode://8109cb43bc356832adfe64b57fe4011249950526ae46b3d4e89ee0387b5aeb2242b15cf08dd43138ab3a844d8e563603b8a0baa4752ad3ffc618308df7b4138d@92.195.45.145:64352
+enode://1dbba11ec1d63cd8d302551a8134691681d89458c2ef05a66a83e05524d3673ab124aeca439b71da4bc6e3cd61bc55060023a46b8efaf82b30d94437f8762817@88.73.55.247:61132
+enode://d2d528679eabf3fd4290f2b53244fa9eda482c9b536460b0628522e6a7f591444a0042f6a68d22050728c3496784d0427f379ded3c177d1c071682fc9bf5ab25@149.172.188.75:56747
+enode://e19c3764edf04de932f2766cd3b218dcbf25cc000bd9e9359c922c6a35384aa3f9363f8a26f27bc73f70d2be3bddf1d85d4d04f44c8ecfb9457e01ff31e7c752@ec2-52-58-146-18.eu-central-1.compute.amazonaws.com:60773
+enode://cd6c534fec59c6d2590c9b5e0eff520ba6592404b798f54e42c9d57784272fd811948f7abbe7ff85e9cafadcd4d67764959a0dc33854381c703a93fc46a13c4f@mue-88-130-62-084.dsl.tropolys.de:17541
+enode://9e9c6f14e3798c27056b124f563affcd7d306bf1e767d30be61b983cd0af50a50d75ea57760df354f99c906a8f4ea7f0c85976866ffc8ab5be2d72831c2c3961@x55b244b6.dyn.telefonica.de:40039
+enode://c27e7484ad0a021b7b0fd1d86a4c6c54325e5119b61d4ec604de2b56a27c3bf91dfbbf8b61944a93e8051302d6329d0992e312b0f8e6f96437c2befc323ac1db@ipbcc2e90e.dynamic.kabel-deutschland.de:30303
+enode://81be0354a3d611b56c03ee17d4c8589b7db568df3b1b7382e2b34a2f839027b0839a6e7cf3664f0b23f9e361aab82390fb31eed31194252a6341f2ca1c87ff42@ip-62-143-23-140.hsi01.unitymediagroup.de:54788
+enode://48cc672ee59b6819bd2ccee29677c67dbc441305e119408932f2e9558b271467b4dfb06cf208da40fce46b04b290c87f8a0d0352a09da11a284546583f314ed4@ppp-188-174-80-124.dynamic.mnet-online.de:30303
+enode://fcfe52d98d71249971e5e6c95a571bdf10ff5ade97f089509735a20036915040c5df41062df52fa9d3f2d1b492b34f20715a7d63dd2b65ae9e9f051760f70973@91.216.245.36:34718
+enode://d1e608d6ff50e3e5feba75959e820e73fef85da0c593e70c95006ef5477e26514f3078598e8008817017de6c47c807f6f6b19a557e8738ee542c806588a870fc@82.211.34.90:54786
+
+
+Das Programm macht wirklich nichts anderes,
+als 3 sehr einfache Schritte nacheinander
+
+schau nach, mit wem Du es bereits versucht hast
+schau weiterhin nach, mit wem es auch ginge
+miß die Geschwindigkeit und die Verfügbarkeit vorab und selektierte nach
+einfachsten Regeln (in diesen "Zustand" nur nach ping-response-time)
+und gib eine Liste "mit Vorschlägen" aus.
+
+Nun kann man die Liste natürlich immer wieder händisch, nacheinander und manuell verwenden-
+meins ist es zwar nicht ganz, aber es waren schon ein paar Male dabei.
+
+Irgendwann geht einem aber auch die "Lust" aus, denkt sich, daß die reserved_peers variable kombiniert mit der reserved-only, 
+ne echt schicke kleine Testmethode zusammengebastelt hat, um zu überprüfen, ob das seit Monaten in den Bart gemurmelte
+nicht doch einfach kaltblütig gleich Montags ab mittags abzufrühstücken.
+
+Gut, ist jetzt 23:30, aber der Kram läuft soweit- 
+ziemlich nette vorteilhafte Ergebnisse, insbsondere wenn man schön schnell
+warp-syncen will, sollte es gut bis ausgezeichnet funktionieren.
+
+wir schauen mal-
+Gut´s Nächtle!
+
+
+
+
+
+
+
