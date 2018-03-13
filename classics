@@ -1,9 +1,9 @@
 Da mein Englisch leider noch immer auf einem zu unvollständigem Niveau ist,
 mein Crew-mate "j" noch nicht komplett "eingestellt" ist, meine Texte direkt
-und sehr sauber ins Englische zu übertragen, also heute mein deutscher Approach.
+und sehr sauber ins Englische zu übertragen, also heute mein deutscher Ansatz.
 
 Da meine Argumente bisher zumeist aus der "Best Practice"-Ecke kamen-
-heute ist der Tag gekommen, mein "Gerede" mit Fakten zu untermauern, die 
+heute ist der Tag gekommen, meine bisherigen "Aussagen" mit Fakten zu untermauern, die 
 einen wissenschaftlichen Ansatz gleichermaßen beinhalten.
 
 Vor etwa 10 Jahren schrieb ein Bekannter von mir eine Arbeit über Transaktionskosten-
@@ -15,22 +15,22 @@ https://en.wikipedia.org/wiki/Transaction_cost
 Dem vorgestellten Prinzip unterliegen alle Marktteilnehmer einer dauerhaften Unsicherheit über die sichere Durchführung einer Transaktion.
 
 Wenn ich keinem groben Irrtum unterliege und öffentliche Zahlen zusammenfasse, schaue ich auf https://etherscan.io/chart/tx und sehe, 
-daß seit "peak"-ethereum im Januar 2018 bei einem Preisgefüge von knapp 1100 ethern,
+daß seit "peak"-ethereum im Januar 2018 bei einem Preisgefüge von knapp 1100 Euro/ether,
 und zusätzliche Sicht auf https://etherscan.io/chart/etherprice bei einer gleichzeitigen Zunahme von Accounts
-siehe https://etherscan.io/chart/address
-und sich zusätzlich vergegenwärtigt, daß für die vielen Transaktionen, die dort "durchgelaufen" sind,
-auch reichlich nodes (20.000 bis zu 24.000) zur Verfügung standen.
-Die Anzahl war großartig und bekräftigte alle Marktteilnehmer in Ihrer Vermutung, daß 
+siehe https://etherscan.io/chart/address und sich zusätzlich vergegenwärtigt, daß für die vielen Transaktionen, 
+die dort "durchgelaufen" sind, auch reichlich nodes (20.000 bis zu 24.000) zur Verfügung standen.
+
+Die Anzahl war großartig und bekräftigte alle Marktteilnehmer& Netzteilnehmer in Ihrer Vermutung, daß 
 das Netzwerk nun stabil genug wäre, um sich mittelfristig zu engagieren.
 Durch dieses Engagement an das "Netz" gebunden, erzeugt auch nach dem oben erwähnten Transaktionskostentheorem,
 eine sogenannte Erwartungshaltung.
-Ich bin mir nicht sicher, ob durchgängige Hinweise auf die Wagnis des Komplettwertverfalls
-das Universum von ethereum eine Reduktion hinsichtlich der Bereitschaft nodes
+Ich bin mir nicht sicher, ob durchgängige Hinweise auf das Wagnis des Komplettwertverfalls
+des Universums von ethereum eine Reduktion hinsichtlich der Bereitschaft nodes
 langfristig (>90Tage) zu betreiben, um sie ggfs. nutzen zu können, 
-und auch um die Blockchain "zu halten".
+und auch um die Blockchain "zu halten" und dauerhaft eben auch zu rechnen.
 
-Dieses halten bedeuted gleichermaßen auch das Ausrechnen aller Blöcke auf dem eigenen Knotenpunkt,
-um auch eine Sicht innerhalb des Netzes einzunehmen, die nicht sonderlich ersichtlich ist.
+Dieses "halten" bedeuted gleichermaßen auch das Ausrechnen aller Blöcke auf dem eigenen Knotenpunkt,
+um auch eine Sicht innerhalb des Netzes einzunehmen, die nicht sonderlich ersichtlich noch erkennbar ist.
 
 Das Netz wird durch alle Teilnehmer gleichermaßen in Gang gehalten,
 diejenigen, die gerne einen Transfer einleiten möchten, bekommen über
@@ -40,8 +40,9 @@ welches zum einen den Wunsch verarbeitet und protokolliert.
 Dies geschieht derzeit über mining, also POW (power of work-stromverbrauchsintensives "Geschäft") 
 mit großrtiger "Aussicht" auf Metropolis: Part 2, ein neuen Stage des Gesamtnetzes, der im Jahre 2018 eingeleitet wird.
 
-Da bisherige Versuche diese Art von Netzwerkstruktur über die erste zu legen,
+Da bisherige Versuche, diese Art von Netzwerkstruktur über die Erste zu legen,
 zeigen einige relevante und umsetzbare Verbesserungen an.
+
 Fragestellung hierbei wird definitiv sein, welche Gruppen an Nutzern und Interessenten sich durchsetzen,
 also wieder ein quasi-demokratischer Vorgang.
 Solche Vorgänge kennen wir schon und die classic-chain ist ein erwartbares Ergebnis der ersten 
@@ -50,8 +51,7 @@ Alles ist auch ablesbar und transparent verfügbar über
 https://github.com/ethereum/EIPs
 
 Soweit so vollständig und gut-
-wie mir scheint, sind in den dauerhaften Verbesserungsprozess des Systems nun
-bestimmte Anforderungen eingeflossen und injiziert worden,
+wie mir scheint, sind in den dauerhaften Verbesserungsprozess des Systems nun bestimmte Anforderungen eingeflossen und injiziert worden,
 die nicht allen Interessen aller ethereum"base" holder bedienen,
 noch den Interessen der coin-holder repräsentieren.
 
