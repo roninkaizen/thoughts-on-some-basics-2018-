@@ -1,11 +1,14 @@
 Mir fiel innerhalb der letzten Wochen auf, daß 
 a) der chinesische Anteil an Nodes im ethereum foundation network zugenommen hat
-b) während die Benutzer isgesamt über eine Qualitätsverminderung im Bereich vom synchron werden sprachen
+b) während die Benutzer isgesamt über eine Qualitätsverminderung im Bereich vom "synchronisieren" sprachen
 
-Nach einer detaillierten Analyse der eigenen 3 nodes ergab sich ein frappierendes Bild.
+Nach einer detaillierten Analyse der eigenen 3 nodes ergab sich ein frappierendes und bisher noch unbestätigtes "Bild".
 
-Die nodes.json, die parity benutzt, um zu zählen, wie erfolgreich die Kontaktaufnahme zu anderen nodes ist,
-wächst mit der Zeit und gibt wertvolle Anhaltspunkte, wo es denn für parity nodes eventuell "klemmen" könnte.
+Die nodes.json, die parity benutzt, 
+um zu zählen, 
+wie erfolgreich die Kontaktaufnahme zu anderen nodes ist,
+wächst mit der Zeit und gibt wertvolle Anhaltspunkte, 
+wo es denn für parity nodes eventuell "klemmen" könnte.
 
 Auszug aus einer nodes.json
 
@@ -40,14 +43,15 @@ Auszug aus einer nodes.json
       "failures": 161
     }
 
-Wenn man da mal so durchguckt, kann einem leicht schlecht werden,
-glücklicherweise kein statistischer Ausschnitt, sondern eine Form von Übertreibung.
+Wenn man da mal so durchguckt, kann einem leicht übel werden,
+glücklicherweise kein statistischer Ausschnitt, sondern meine Form von Übertreibung.
 
-Bitte überprüft aus Eurer individuellen json datei heraus, wie die "connect-successful"- rate einer jeden node ist-
+Bitte überprüft in Eurer individuellen json datei, wie die "connect-successful"- rate einer jeden node ist- wenn
+dafür die Zeit existiert.
 
-mit den gesammelten Daten können wir weiter "gehen" als bisher.
+Mit den gesammelten Daten können wir weiter "gehen" als bisher.
 
-Bevor was Dummes geschieht, sollen wir dem entgegengehen.   
+Bevor was Dummes geschieht, dürfen wir dem "entgegengehen"
 
 
 
