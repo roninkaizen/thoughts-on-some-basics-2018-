@@ -1,14 +1,11 @@
-Wie ich schon einige Male berichtet habe,
-kam mir der Gedanke, daß das lose verpaaren von nodes
+Wie ich schon einige Male berichtet habe, kam mir der Gedanke, dass das lose Verpaaren von Nodes
 zwar reichlich Vorteile, wohl aber auch ein paar Nachteile mit sich bringt.
 
-Einige Recherche und Probieren brachten mich dann langsam aber sicher auf die richtige
-Lösung bzw. den Ansatz, dies an der Stelle mit den Mittel zu verbessern, wo ich es faktisch kann.
+Einige Recherche und probieren brachten mich dann langsam aber sicher auf die richtige Lösung bzw. den Ansatz,
+dies an der Stelle mit den Mitteln zu verbessern, wo ich es faktisch kann.
 
-Dies geht so-
-bisher ausser Acht lassend, daß parity durchaus eine reserved.txt 
-verarbeiten kann-
-soweit, so hervorragend.
+Dies geht so - bisher ausser Acht lassend, daß parity durchaus eine reserved.txt 
+verarbeiten kann - soweit, so hervorragend.
 
 Darüberhinaus schreibt parity selbst in eines nodes.json ja schon "Kandidaten" bzw. sogar Erfolgsquotienten
 für erfolgreiche Kontaktaufnahme
@@ -31,33 +28,32 @@ ich ziehe da mal drei Zeilen hervor
       "failures": 213
     },
 
-Ehrlich gesagt, sehen diese nodes nicht so aus, als "wenn da was ginge" um eine sehr wohlwollende Formulierung
-zu verwenden.
+Ehrlich gesagt, sehen diese nodes nicht so aus, als "wenn da was ginge", um eine sehr wohlwollende Formulierung zu verwenden.
 
 Woran das liegen mag, weiß keiner genau, aber die Quote von attempts zu failures kann sich jeder an drei Daumen abzählen.
 
-Je höher der Wert desto schlechter die erfolgsorientierte Kontaktaufnahme, von dem "danach" ganz zu schweigen.
+Je höher der Wert, desto schlechter die erfolgsorientierte Kontaktaufnahme, von dem "Danach" ganz zu schweigen.
 
-Also-
-mit einer zwischentabelle zum abgleich sind wir schnell "dabei",
-alle "möglichen" zu scoren, danach zu ranken und "vorzuhalten".
-Übers Ablegen und so weiter noch keine Rede.
+Mit einer Zwischentabelle zum Abgleich sind wir schnell dabei, alle "möglichen" zu scoren, danach zu ranken und "vorzuhalten".
+Übers Ablegen und so weiter ist hier noch keine Rede.
 Wir reden hier nicht über Wahnsinnstaten, sondern einfach von Übertragungen in andere Formate,
-um damit anders besser/effektiver arbeiten zu können.
+um damit anders/besser/effektiver arbeiten zu können.
 
-Darüberhinaus kann ich auch eine weitere Quelle für "mögliche" hinzunehmen.
+Darüberhinaus kann ich auch eine weitere Quelle für mögliche "Austauschkandidaten" dazunehmen.
+
 Diese nennt sich ethernodes.org und zeigt die Anzahl der nodes und ihre Details an,
 da dies eine Webseite ist, die per curl parametrisiert aufgerufen werden kann,
 bekommen wir hier auch noch Werte wie oben beschrieben.
 
-Ausgehend davon, daß sich innerhalb der eigenen nodes.json nur eine Teilmenge an nodes im Netz 
-befindlich connecten kann (also nicht swarm, EthereumBot, u.a) um somit eine
-höhere und schnelle dabei aber stabilere dauerhafte Austauschleistung zu erzielen.
+Ausgehend davon, daß sich innerhalb der eigenen nodes.json Datei nur eine Teilmenge der nodes im Netz befinden kann 
+(also nicht swarm, EthereumBot, u.a.),  
+sucht und sortiert das curl-script "auf Befehl" hin alle nodes aus der Quelle ethernodes.org
+aus und nach Kriterien vor, um somit eine höhere, aber stabilere "Austauschleistung" dauerhaft zu erzielen.
 
-
-Ausgehend vom patricia tree und den dahinterliegenden mechanismen im herzen der evm und der Weitläufigkeit
-des gesamten Spektrum ans nodes kann ich also davon ausgehen, daß sich also 
-locker 500-1000 nodes in meiner mittelbaren Umgebung befinden. Wie ich darauf komme ist sehr einfach.
+Ausgehend vom patricia tree und den dahinterliegenden Mechanismen im Herzen der evm und der Weitläufigkeit
+des gesamten Spektrum ans nodes,
+kann ich also davon ausgehen, daß sich also locker 500-1000 nodes in meiner mittelbaren Umgebung befinden. 
+Wie ich darauf komme ist sehr einfach.
 
 Mit einem optischen Trace auf die einzelnen nodes, die die niedrigsten Pingraten zu meinen eigenen host erzeugen,
 kann die übertragungsrate gleich hoch, niedriger order höher sein.
