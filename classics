@@ -1,6 +1,6 @@
 Da mein Englisch leider noch immer auf einem zu unvollständigem Niveau ist,
-mein Crew-mate "j" noch nicht komplett "eingestellt" ist, meine Texte direkt
-und sehr sauber ins Englische zu übertragen, also heute mein deutscher Ansatz.
+und ich vermutlich sehr viel länger brauchen werde, um meine Texte lesbar
+und sehr sauber ins Englische zu übertragen, erfolgt heute mein deutscher Ansatz/Aufsatz.
 
 Da meine Argumente bisher zumeist aus der "Best Practice"-Ecke kamen-
 heute ist der Tag gekommen, meine bisherigen "Aussagen" mit Fakten zu untermauern, die 
@@ -9,53 +9,64 @@ einen wissenschaftlichen Ansatz gleichermaßen beinhalten.
 Vor etwa 10 Jahren schrieb ein Bekannter von mir eine Arbeit über Transaktionskosten-
 der Ansatz ist hier genauer beschrieben
 https://de.wikipedia.org/wiki/Transaktionskosten
-- da gerade die deutsche Wikipedia Community gelegentlich "verschrien" ist gibt es das gleiche auch auf Englisch.
+- da gerade die deutsche Wikipedia Community gelegentlich "verschrien" ist, 
+gibt es das gleiche auch auf Englisch.
 https://en.wikipedia.org/wiki/Transaction_cost
 
-Dem vorgestellten Prinzip unterliegen alle Marktteilnehmer einer dauerhaften Unsicherheit über die sichere Durchführung einer Transaktion.
+Es ist ein Teil eines betriebswirtschaftlichen Studium auch diesen Lehrinhalt persönlich zu verarbeiten.
 
-Wenn ich keinem groben Irrtum unterliege und öffentliche Zahlen zusammenfasse, schaue ich auf https://etherscan.io/chart/tx und sehe, 
+Nach dem vorgestellten Prinzip unterliegen alle Marktteilnehmer einer dauerhaften Unsicherheit über 
+die sichere Durchführung einer Transaktion.
+
+Wenn ich keinem groben Irrtum unterliege und öffentliche Zahlen zusammenfasse, 
+schaue ich auf https://etherscan.io/chart/tx und sehe, 
 daß seit "peak"-ethereum im Januar 2018 bei einem Preisgefüge von knapp 1100 Euro/ether,
-und zusätzliche Sicht auf https://etherscan.io/chart/etherprice bei einer gleichzeitigen Zunahme von Accounts
-siehe https://etherscan.io/chart/address und sich zusätzlich vergegenwärtigt, daß für die vielen Transaktionen, 
-die dort "durchgelaufen" sind, auch reichlich nodes (20.000 bis zu 24.000) zur Verfügung standen.
+und einer zusätzlichen Sicht auf https://etherscan.io/chart/etherprice 
+bei gleichzeitiger Zunahme von Accounts siehe https://etherscan.io/chart/address seitdem 
+erhebliche Veränderungen stattgefunden haben müssen, die mit Transaktionskosten zu tun haben.
 
-Die Anzahl war großartig und bekräftigte alle Marktteilnehmer& Netzteilnehmer in Ihrer Vermutung, daß 
+Wenn man sich vergegenwärtigt, daß für die vielen Transaktionen, 
+die dort "durchgelaufen" sind, auch reichlich nodes (min 20.000 bis zu 24.000) zur Verfügung standen, 
+ist das Transaktionskostentheorem betrachtet auf ethereum und den erwähnten Zeitraum nicht widerlegt
+
+Die Anzahl der nodes war "großartig" und bekräftigte alle Marktteilnehmer& Netzteilnehmer in Ihrer Vermutung, daß 
 das Netzwerk nun stabil genug wäre, um sich mittelfristig zu engagieren.
 Durch dieses Engagement an das "Netz" gebunden, erzeugt auch nach dem oben erwähnten Transaktionskostentheorem,
 eine sogenannte Erwartungshaltung.
+
 Ich bin mir nicht sicher, ob durchgängige Hinweise auf das Wagnis des Komplettwertverfalls
-des Universums von ethereum eine Reduktion hinsichtlich der Bereitschaft nodes
-langfristig (>90Tage) zu betreiben, um sie ggfs. nutzen zu können, 
-und auch um die Blockchain "zu halten" und dauerhaft eben auch zu rechnen.
+des Universums von ethereum in eine Reduktion geführt haben, hinsichtlich der Bereitschaft nodes
+langfristig (>90Tage) zu betreiben, um sie ggfs. nutzen zu können. 
+Nicht nur sondern auch um die Blockchain "zu halten" und dauerhaft eben auch zu "rechnen".
 
 Dieses "halten" bedeuted gleichermaßen auch das Ausrechnen aller Blöcke auf dem eigenen Knotenpunkt,
 um auch eine Sicht innerhalb des Netzes einzunehmen, die nicht sonderlich ersichtlich noch erkennbar ist.
 
-Das Netz wird durch alle Teilnehmer gleichermaßen in Gang gehalten,
+Das Netz wird durch alle Teilnehmer gleichermaßen "in Gang" gehalten,
 diejenigen, die gerne einen Transfer einleiten möchten, bekommen über
-die jeweils gewählte Wallet-Software den inmittelbaren Zugang 
+die jeweils gewählte Wallet-Software den unmittelbaren Zugang 
 auf ein zahlungs- UND kontraktorientiertes Verarbeitungsnetzwerk, 
-welches zum einen den Wunsch verarbeitet und protokolliert.
+welches den Vertrag (ja auch Übergänge können Verträge sein, sogar eine Schenkung ist ein Vertrag) verarbeitet und protokolliert.
 Dies geschieht derzeit über mining, also POW (power of work-stromverbrauchsintensives "Geschäft") 
-mit großrtiger "Aussicht" auf Metropolis: Part 2, ein neuen Stage des Gesamtnetzes, der im Jahre 2018 eingeleitet wird.
+mit großrtiger "Aussicht" auf Metropolis: Part 2, ein neuen Stage des Gesamtnetzes, der im Jahre 2018 eingeleitet werden soll.
 
 Da bisherige Versuche, diese Art von Netzwerkstruktur über die Erste zu legen,
 zeigen einige relevante und umsetzbare Verbesserungen an.
 
 Fragestellung hierbei wird definitiv sein, welche Gruppen an Nutzern und Interessenten sich durchsetzen,
 also wieder ein quasi-demokratischer Vorgang.
-Solche Vorgänge kennen wir schon und die classic-chain ist ein erwartbares Ergebnis der ersten 
-"Abstimmungsrunde", bei ethereum hard-fork genannt.
+Solche Vorgänge kennen wir schon und die classic-chain ist ein erwartbares Ergebnis einer 
+"Abstimmungsrunde", bei ethereum hard-fork genannt. 
 Alles ist auch ablesbar und transparent verfügbar über
 https://github.com/ethereum/EIPs
 
 Soweit so vollständig und gut-
-wie mir scheint, sind in den dauerhaften Verbesserungsprozess des Systems nun bestimmte Anforderungen eingeflossen und injiziert worden,
+wie mir scheint, sind in den dauerhaften Verbesserungsprozess des Systems nun bestimmte Anforderungen eingeflossen 
+und "injiziert" worden,
 die nicht allen Interessen aller ethereum"base" holder bedienen,
-noch den Interessen der coin-holder repräsentieren.
+noch den Interessen der coin-holder (coin ist Untermenge aller coins auf der ethereum mainchain zu verstehen) repräsentieren.
 
-Ich denke, aus dem Mißverhältnis aller Interessen kann jetzt etwas außergwöhnlich Großartiges enstehen.
+Ich denke, aus dem Mißverhältnis aller Interessen kann jetzt etwas Großartiges enstehen.
 
 Fall jemals daran Zweifel bestanden haben mögen, ob ethereum "es schaffen kann"-
 dann fühle auch ich Verantwortlichkeit.
