@@ -4,8 +4,7 @@ zwar reichlich Vorteile, wohl aber auch ein paar Nachteile mit sich bringt.
 Einige Recherche und probieren brachten mich dann langsam aber sicher auf die richtige Lösung bzw. den Ansatz,
 dies an der Stelle mit den Mitteln zu verbessern, wo ich es faktisch kann.
 
-Dies geht so - bisher ausser Acht lassend, daß parity durchaus eine reserved.txt 
-verarbeiten kann - soweit, so hervorragend.
+Dies geht so - bisher ausser Acht lassend, daß parity durchaus eine reserved.txt verarbeiten kann - soweit, so hervorragend.
 
 Darüberhinaus schreibt parity selbst in eines nodes.json ja schon "Kandidaten" bzw. sogar Erfolgsquotienten
 für erfolgreiche Kontaktaufnahme
@@ -28,9 +27,10 @@ ich ziehe da mal drei Zeilen hervor
       "failures": 213
     },
 
-Ehrlich gesagt, sehen diese nodes nicht so aus, als "wenn da was ginge", um eine sehr wohlwollende Formulierung zu verwenden.
+Ehrlich gesagt, sehen diese nodes nicht so aus, als "wenn da viel ginge", um eine sehr wohlwollende Formulierung zu verwenden.
+Diese Aussage ist jedoch in einem zeitlichen Kontext zu sehen.
 
-Woran das liegen mag, weiß keiner genau, aber die Quote von attempts zu failures kann sich jeder an drei Daumen abzählen.
+Woran das liegen mag, ist unklar, aber die Quote von attempts zu failures kann sich jeder an drei Daumen abzählen.
 
 Je höher der Wert, desto schlechter die erfolgsorientierte Kontaktaufnahme, von dem "Danach" ganz zu schweigen.
 
@@ -39,42 +39,49 @@ Mit einer Zwischentabelle zum Abgleich sind wir schnell dabei, alle "möglichen"
 Wir reden hier nicht über Wahnsinnstaten, sondern einfach von Übertragungen in andere Formate,
 um damit anders/besser/effektiver arbeiten zu können.
 
-Darüberhinaus kann ich auch eine weitere Quelle für mögliche "Austauschkandidaten" dazunehmen.
+Darüberhinaus kann man auch eine weitere Quelle für mögliche "Austauschkandidaten" hinzunehmen.
 
 Diese nennt sich ethernodes.org und zeigt die Anzahl der nodes und ihre Details an,
-da dies eine Webseite ist, die per curl parametrisiert aufgerufen werden kann,
-bekommen wir hier auch noch Werte wie oben beschrieben.
+da dies eine Webseite ist, die per curl aufgerufen werden kann,
+bekommen wir hier ähnliche Werte wie oben beschrieben, jedoch ohne einen Quotienten über Erfolgswahrscheinlichkeit 
+einer erfolgreichen Kommunikationsaufnahme.
 
-Ausgehend davon, daß sich innerhalb der eigenen nodes.json Datei nur eine Teilmenge der nodes im Netz befinden kann 
-(also nicht swarm, EthereumBot, u.a.),  
-sucht und sortiert das curl-script "auf Befehl" hin alle nodes aus der Quelle ethernodes.org
-aus und nach Kriterien vor, um somit eine höhere, aber stabilere "Austauschleistung" dauerhaft zu erzielen.
+Ausgehend davon, daß sich innerhalb der eigenen nodes.json Datei 
+immer nur eine Teilmenge der nodes im Netz befinden kann (also nicht swarm, EthereumBot, u.a.-),  
+zieht das curl-script alle nodes aus der Quelle ethernodes.org "heraus"
+die gewünschten Peers nach Kriterien die minimal vorliegen müssen, 
+um somit eine höhere, 
+dabei stabilere "Austauschleistung" dauerhaft zu erreichen.
 
 Ausgehend vom patricia tree und den dahinterliegenden Mechanismen im Herzen der evm und der Weitläufigkeit
-des gesamten Spektrum ans nodes,
-kann ich also davon ausgehen, daß sich also locker 500-1000 nodes in meiner mittelbaren Umgebung befinden. 
+des gesamten Spektrum an nodes,
+kann ich also davon ausgehen, daß sich also 500-1000 nodes in meiner "Umgebung" befinden. 
 Wie ich darauf komme ist sehr einfach.
 
-Mit einem optischen Trace auf die einzelnen nodes, die die niedrigsten Pingraten zu meinen eigenen host erzeugen,
-kann die übertragungsrate gleich hoch, niedriger order höher sein.
+Mit einem Trace (einer Paketverfolgung) auf die einzelnen nodes, 
+geholt von ethernodes, 
+die die niedrigsten Pingraten zu meinen eigenen host haben, 
+kann die übertragungsrate gleich hoch, niedriger oder höher sein (ping ungleich Übertragungsrate).
 Ausgehend von der ersten rudimentären Tabelle mit
 
-enode-attemtps-failures-seenat(unixtime)
+enode-attemtps-failures-seen_at(unixtime)
 
 können wir nun erweitern, oder schon die erste Aufteilung andenken
-hinsichtlich normalisierung
+hinsichtlich Normalisierung
 ja, wichtig, aber etwas später
-
-um was erweitern wir eventuell und wann tun wir dies zu welchem Zwecke-
-kiss -devise
 
 Also
 
-das zusätzliche pingen und messen/halten/verarbeiten dieser Werte
-darf mit den dem Quotienten
+ist das zusätzliche Pingen und Messen/Halten/Verarbeiten dieser Werte
+ mit den dem Quotienten
 
-zusammengeführt werden, der uns sagt, wie erfolgreich es war anzuklopfen-
-wie auch immer, es gilt zu vermeiden, verbindungsversuche zu echten Blindgängern zu regulieren bzw. zu minimieren.
+zusammenzuführen, der "uns" sagen, wie erfolgreich es "bisher" war "anzuklopfen"-
+und wie weit der von uns entfernt ist.
+
+
+Es gilt zu vermeiden, 
+Verbindungsversuche zu echten Blindgängern zu unternehmen.
+und dabei die Entfernung in hops nicht über 4 gehen zu lassen.
 
 quotient erfolgsquote
 
@@ -89,20 +96,15 @@ ein zweites script "wirft" aus der nodes.json
 table(2)
 enode seenat(unixtime) (ip) ascending sorted by Quotient aus attempts/failures 
 
-wenn nun auf welcher datenbankebene auch immer beide tabellen "übereinandergelegt" 
-hat, kommt man auf eine ausgezeichnet erfrischende Auswahl an nodes, mit 
-denen man sich auch rückblickend auf megabytes an nodes.json datei zu selten
-gepaart hat oder nicht konnte, weil "irgendwas" war.
-
-Nun hat man wenn man mag eine überlappende Tabelle mit der wilde spiele gehen,
-zum einen die erweiterung des curl scriptes zum selektieren wesentlich größerer datenmengen
-um diese dann angemessen energie- und ressourcensparend in die software zurückgeben kann.
+So nun auf welcher Datenbankebene auch immer beide Tabellen "übereinandergelegt" 
+werden, kommt man auf eine "ausgezeichnet erfrischende" Auswahl an nodes, mit 
+denen man sich "paaren" könnte.
 
 Meine Idee ist hier simpel einfach und sehr angenehm und leicht umzusetzen.
 Geht so:
 Die übereinandergelegte Tabelle muß nicht schön sein, 
 wohl aber einem Erfordernis entsprechen,
-damit es bei parity gleich geht.
+damit es "in" parity gleich "geht".
 Sie muß richtig formatiert sein,
 denn wenn sie falsch aussieht, wird sie nicht verarbeitet werden. 
 Nur drei Versuche später konnte
@@ -168,20 +170,21 @@ enode://fcfe52d98d71249971e5e6c95a571bdf10ff5ade97f089509735a20036915040c5df4106
 enode://d1e608d6ff50e3e5feba75959e820e73fef85da0c593e70c95006ef5477e26514f3078598e8008817017de6c47c807f6f6b19a557e8738ee542c806588a870fc@82.211.34.90:54786
 
 
-Das Programm macht wirklich nichts anderes,
-als 3 sehr einfache Schritte nacheinander
+Das "Programm" macht wirklich nichts anderes, als 3 sehr einfache Schritte nacheinander
 
 schau nach, mit wem Du es bereits versucht hast
+
 schau weiterhin nach, mit wem es auch ginge
+
 miß die Geschwindigkeit und die Verfügbarkeit vorab und selektierte nach
 einfachsten Regeln (in diesen "Zustand" nur nach ping-response-time)
 und gib eine Liste "mit Vorschlägen" aus.
 
 Nun kann man die Liste natürlich immer wieder händisch, nacheinander und manuell verwenden-
-meins ist es zwar nicht ganz, aber es waren schon ein paar Male dabei.
+meins ist es zwar nicht ganz, aber zum ersten Probieren ging es.
 
-Irgendwann geht einem aber auch die "Lust" aus, denkt sich, daß die reserved_peers variable kombiniert mit der reserved-only, 
-ne echt schicke kleine Testmethode zusammengebastelt hat, um zu überprüfen, ob das seit Monaten in den Bart gemurmelte
+Irgendwann geht einem aber auch die "Lust" aus, ich dachte, daß die reserved_peers variable kombiniert mit der reserved-only, 
+'ne echt schicke kleine Testmethode zusammengebastelt hat, um zu überprüfen, ob das seit Monaten in den Bart gemurmelte
 nicht doch einfach kaltblütig gleich Montags ab mittags abzufrühstücken.
 
 Gut, ist jetzt 23:30, aber der Kram läuft soweit- 
@@ -192,7 +195,14 @@ wir schauen mal-
 Gut´s Nächtle!
 
 
-
+Update 21.03.18
+test completed- nice8-)
+Komplett anders gemacht, 
+sind wesentlich mehr Schritte, 
+Code wurde inzwischen mehrfach verändert, 
+aber das dahinterstehende Prinzip 
+der oben vorgestellten Raw-Beta ist funktional.
+Vier warps später und ich bin sehr zufrieden.
 
 
 
