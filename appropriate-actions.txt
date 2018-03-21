@@ -1,14 +1,14 @@
 Mir fiel innerhalb der letzten Wochen auf, daß 
 a) der chinesische Anteil an Nodes im ethereum foundation network zugenommen hat
-b) während die Benutzer isgesamt über eine Qualitätsverminderung im Bereich vom "synchronisieren" sprachen
+b) während die Benutzer isgesamt über eine Qualitätsverminderung im Bereich vom "Synchronisieren" sprachen
 
-Nach einer detaillierten Analyse der eigenen 3 nodes ergab sich ein frappierendes und bisher noch unbestätigtes "Bild".
+Nach einer detaillierten Analyse der eigenen 3 nodes ergab sich ein frappierendes aber bisher noch unbestätigtes "Bild".
 
 Die nodes.json, die parity benutzt, 
 um zu zählen, 
 wie erfolgreich die Kontaktaufnahme zu anderen nodes ist,
-wächst mit der Zeit und gibt wertvolle Anhaltspunkte, 
-wo es denn für parity nodes eventuell "klemmen" könnte.
+wächst mit der Zeit und gibt Anhaltspunkte, 
+wo es denn für "parity node runners" eventuell "klemmen" könnte.
 
 Auszug aus einer nodes.json
 
@@ -53,5 +53,10 @@ Mit den gesammelten Daten können wir weiter "gehen" als bisher.
 
 Bevor was Dummes geschieht, dürfen wir dem "entgegengehen"
 
+Ich habe in mindestens einem der weiteren Dateien in diesem Repo eine Programmbeschreibung abgelegt,
+in der ich beschreibe, wie die Fragestellung mit "dead-nodes" bearbeitet werden kann.
 
-
+Die Bewerbung um ein Stipendium bei der Foundation werde ich wohl nicht abschicken, weil ich mir
+aufgrund meiner Sprachkenntnisse keine Chancen ausrechne, positiv berücksichtigt zu werden.
+Daher proove ich mit einem Gedankenexperiment in Form eines virtuell laufenden Programmes, 
+ähnlich einer Touring-Maschine, in der Hoffnung, daß diese gute Dienste leistet bis was "anderes" kommt.
