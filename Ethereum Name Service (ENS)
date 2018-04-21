@@ -1,45 +1,66 @@
+== Ethereum Name Service (ENS)
 
-Ethereum Name Service (ENS)
+The _Ethereum Name Service (ENS)_ is one of the first Ethereum DApps, offering a decentralized name registry for Ethereum. It can be compared to the Domain Name System (DNS), but unlike DNS which is partially centralized, ENS is completely decentralized.
 
-The Ethereum Name Service (ENS) is one of the first Ethereum DApps, offering a decentralized name registry for Ethereum. It can be compared to the Domain Name System (DNS), but unlike DNS which is partially centralized, ENS is completely decentralized.
-Name resolution services
 
-What is a name resolution service?
+=== Name resolution services
 
-Why another one?
-    
+* What is a name resolution service?
+* Why another one?
+* Why are they needed (addresses, contracts, swarm objects, etc.)
+* Benefits (security, disambiguation, redirection/upgrade, readability/user experience)
+* Concerns about squatting, trademarks, dispute resolution
 
-Why are they needed (addresses, contracts, swarm objects, etc.)
+=== History of Ethereum name services
 
-Benefits (security, disambiguation, redirection/upgrade, readability/user experience)
+ENS is not the first name registration service in Ethereum. It was preceded by "NameReg" ...
 
-Concerns about squatting, trademarks, dispute resolution
+=== The ENS specification: ERC-137
 
-History of Ethereum name services
-
-ENS is not the first name registration service in Ethereum. It was preceded by "NameReg" …​
-The ENS specification: ERC-137
+////
+Is this an EIP? Or just an ERC?
+////
 
 Describe the standard
-ENS contract interface
-The ENS DApp
-Registering a name
-The ENS auction
-Why an auction?
-Timeline of an ENS auction
-Making a bid
-Finaliing an auction
-Setting an ENS name resolver
-Types of resolvers
-Address resolver
-Smart contract resolver
-Swarm object resolver
-ENS subdomains
-Creating a subdomains
-ENS secondary markets
-Buying and selling names
-Renting a name
-Conclusion
+
+=== ENS contract interface
+
+=== The ENS DApp
+
+=== Registering a name
+
+==== The ENS auction
+
+===== Why an auction?
+
+===== Timeline of an ENS auction
+
+===== Making a bid
+
+===== Finaliing an auction
+
+=== Setting an ENS name resolver
+
+==== Types of resolvers
+
+==== Address resolver
+
+==== Smart contract resolver
+
+==== Swarm object resolver
+
+=== ENS subdomains
+
+==== Creating a subdomains
+
+=== ENS secondary markets
+
+==== Buying and selling names
+
+==== Renting a name
+
+=== Conclusion
+
 
 Links:
 
@@ -53,7 +74,7 @@ https://registrar.ens.domains/
 
 https://github.com/ethereum/ens/
 
-https://docs.ens.domains/ 
+https://docs.ens.domains/
 
 https://www.myetherwallet.com/#ens (personal addidtion-worked fine and is the same service like mycrypto.com)
 
