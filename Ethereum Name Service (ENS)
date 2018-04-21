@@ -4,15 +4,16 @@ Ethereum Name Service (ENS)
 The Ethereum Name Service (ENS) is one of the first Ethereum DApps, offering a decentralized name registry for Ethereum. It can be compared to the Domain Name System (DNS), but unlike DNS which is partially centralized, ENS is completely decentralized.
 Name resolution services
 
-    What is a name resolution service?
+What is a name resolution service?
 
-    Why another one?
+Why another one?
+    
 
-    Why are they needed (addresses, contracts, swarm objects, etc.)
+Why are they needed (addresses, contracts, swarm objects, etc.)
 
-    Benefits (security, disambiguation, redirection/upgrade, readability/user experience)
+Benefits (security, disambiguation, redirection/upgrade, readability/user experience)
 
-    Concerns about squatting, trademarks, dispute resolution
+Concerns about squatting, trademarks, dispute resolution
 
 History of Ethereum name services
 
@@ -53,3 +54,8 @@ https://registrar.ens.domains/
 https://github.com/ethereum/ens/
 
 https://docs.ens.domains/ 
+
+https://www.myetherwallet.com/#ens (personal addidtion-worked fine and is the same service like mycrypto.com)
+
+
+
