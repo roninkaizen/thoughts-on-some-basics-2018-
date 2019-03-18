@@ -3,8 +3,9 @@ und ich vermutlich sehr viel länger brauchen werde, um meine Texte lesbar
 und sehr sauber ins Englische zu übertragen, erfolgt heute mein deutscher Ansatz/Aufsatz.
 
 Da meine Argumente bisher zumeist aus der "Best Practice"-Ecke kamen-
-heute ist der Tag gekommen, meine bisherigen "Aussagen" mit Fakten zu untermauern, die 
-einen wissenschaftlichen Ansatz gleichermaßen beinhalten.
+heute ist der Tag gekommen, meine bisherigen "Aussagen" mit Fakten zu unterfütter, die 
+einen wissenschaftlichen Ansatz gleichermaßen beinhalten, dennoch nicht den Formalien genügen,
+um auch einen Einblick in die ethereum-welt zu bekommen.
 
 Vor etwa 10 Jahren schrieb ein Bekannter von mir eine Arbeit über Transaktionskosten-
 der Ansatz ist hier genauer beschrieben
@@ -13,10 +14,10 @@ https://de.wikipedia.org/wiki/Transaktionskosten
 gibt es das gleiche auch auf Englisch.
 https://en.wikipedia.org/wiki/Transaction_cost
 
-Es ist ein Teil eines betriebswirtschaftlichen Studium auch diesen Lehrinhalt persönlich zu verarbeiten.
+Es ist ein Teil eines betriebswirtschaftlichen Studiums, sich damit zumindest "kurz" auseinanderzusetzen.
 
 Nach dem vorgestellten Prinzip unterliegen alle Marktteilnehmer einer dauerhaften Unsicherheit über 
-die sichere Durchführung einer Transaktion.
+die sichere Durchführung einer Transaktion und die Redlichkeit aller Teilnehmer.
 
 Wenn ich keinem groben Irrtum unterliege und öffentliche Zahlen zusammenfasse, 
 schaue ich auf https://etherscan.io/chart/tx und sehe, 
@@ -27,7 +28,8 @@ erhebliche Veränderungen stattgefunden haben müssen, die mit Transaktionskoste
 
 Wenn man sich vergegenwärtigt, daß für die vielen Transaktionen, 
 die dort "durchgelaufen" sind, auch reichlich nodes (min 20.000 bis zu 24.000) zur Verfügung standen, 
-ist das Transaktionskostentheorem betrachtet auf ethereum und den erwähnten Zeitraum nicht widerlegt
+ist das Transaktionskostentheorem betrachtet auf ethereum und den erwähnten Zeitraum aus meiner Sicht nicht widerlegt, da 
+die Transaktionskosten mit steigender Unsicherheit über einen oder mehrere Faktoren zunehmen.
 
 Die Anzahl der nodes war "großartig" und bekräftigte alle Marktteilnehmer& Netzteilnehmer in Ihrer Vermutung, daß 
 das Netzwerk nun stabil genug wäre, um sich mittelfristig zu engagieren.
@@ -37,18 +39,18 @@ eine sogenannte Erwartungshaltung.
 Ich bin mir nicht sicher, ob durchgängige Hinweise auf das Wagnis des Komplettwertverfalls
 des Universums von ethereum in eine Reduktion geführt haben, hinsichtlich der Bereitschaft nodes
 langfristig (>90Tage) zu betreiben, um sie ggfs. nutzen zu können. 
-Nicht nur sondern auch um die Blockchain "zu halten" und dauerhaft eben auch zu "rechnen".
+Nicht nur sondern auch um die Blockchain "zu halten" und dauerhaft eben auch zu "rechnen" bzw. teilnehmen zu können.
 
 Dieses "halten" bedeuted gleichermaßen auch das Ausrechnen aller Blöcke auf dem eigenen Knotenpunkt,
-um auch eine Sicht innerhalb des Netzes einzunehmen, die nicht sonderlich ersichtlich noch erkennbar ist.
+um auch eine Sicht innerhalb des Netzes einzunehmen, die nicht sonderlich ersichtlich hinsichtlich der Absichten aller Marktteilnehmer noch der einzelne Teilnehmer namentlich (noch weniger motivatorisch) erkennbar ist.
 
 Das Netz wird durch alle Teilnehmer gleichermaßen "in Gang" gehalten,
 diejenigen, die gerne einen Transfer einleiten möchten, bekommen über
 die jeweils gewählte Wallet-Software den unmittelbaren Zugang 
 auf ein zahlungs- UND kontraktorientiertes Verarbeitungsnetzwerk, 
-welches den Vertrag (ja auch Übergänge können Verträge sein, sogar eine Schenkung ist ein Vertrag) verarbeitet und protokolliert.
+welches den Vertrag (ja auch Übergänge können Verträge sein, sogar eine Schenkung ist ein Vertrag) verarbeitet und protokolliert werden.
 Dies geschieht derzeit über mining, also POW (power of work-stromverbrauchsintensives "Geschäft") 
-mit großrtiger "Aussicht" auf Metropolis: Part 2, ein neuen Stage des Gesamtnetzes, der im Jahre 2018 eingeleitet werden soll.
+mit großrtiger "Aussicht" auf Metropolis: Part 2, ein neuen Stage des Gesamtnetzes, der im Jahre 2019 eingeleitet werden soll.
 
 Da bisherige Versuche, diese Art von Netzwerkstruktur über die Erste zu legen,
 zeigen einige relevante und umsetzbare Verbesserungen an.
@@ -57,7 +59,7 @@ Fragestellung hierbei wird definitiv sein, welche Gruppen an Nutzern und Interes
 also wieder ein quasi-demokratischer Vorgang.
 Solche Vorgänge kennen wir schon und die classic-chain ist ein erwartbares Ergebnis einer 
 "Abstimmungsrunde", bei ethereum hard-fork genannt. 
-Alles ist auch ablesbar und transparent verfügbar über
+Alle anstehenden Veränderungen hinsichtlich der Organisation und der Protokolle ist auch "menschen"-lesbar und transparent verfügbar über
 https://github.com/ethereum/EIPs
 
 Soweit so vollständig und gut-
@@ -78,5 +80,13 @@ Meine persönliche Leseempfehlung dazu ist dazu folgender,auch Wikipedia, wieder
 aber auch auf englisch verfügbar.
 https://de.wikipedia.org/wiki/Kategorischer_Imperativ
 
+Es geht also auch darum mit soziologischen Methoden und Mitteln einen Interessenausgleich zwischen bereits investierten
+Personen oder Gruppen und den echten Anwendern und Anwendungen zu finden, die dieses System als Ganzes oder nur in Anteilen 
+benuten wollen, ohne dabei einen großen Overhead an Regulierungen zu finden der alle beteiligen Parteien gleichermaßen nützt.
+
+Das anzustrebende Verhalten bei Diskussionen um eben diesen Ausgleich zwischen allen Interessengruppen zu finden, 
+dient der kategorische imperativ den Beteiligten eine Richtschnur mit an die Hand zu geben, um im Sinne aller unterschiedlichster Interessengruppen einen Ausgleich zu finden, ohne sich gleich "ans Leder zu gehen", aber in der angenehmen Art,
+sie bedeutet abgekürzt gleichermaßen niemanden auszunutzen. Vielleicht ist das bei manchen in Vergessenheit geraten,
+wäre doch sehr ärgerlich wenn dies so bleibt.
 
 Ich bedanke mich fürs Lesen und ggfs. auch für eine Übersetzung ;-)
